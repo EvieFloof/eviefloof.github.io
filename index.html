@@ -1,51 +1,88 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='//fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="style.css">
-    <title>Ewo</title>
+    <title>Hey , I'm Ewo</title>
+
+    <link rel="stylesheet" href="style/index_style.css">
+    <link rel="stylesheet" href="style/icons.css">
 </head>
+
 <body>
-    <div class="Navbar">
-        <p onclick="this.innerText='$Ewo';this.style.color='yellow'">Ewo</p>
-        <div class="Navbar-Links">
-            <button onclick="this.innerText='as.ewo'">Discord</button>
-            <button onclick="NavigateTo('https://www.github.com/nowewo')">Github</button>
-            <button onclick="NavigateTo('#')">Home</button>
-        </div>
+    <div class="Navigation">
+        <a href="#Home">
+            Home
+        </a>
+        <a href="#About">
+            About me
+        </a>
+        <a href="#Contact">
+            Contact me
+        </a>
     </div>
-    <div class="Section" style="top:0px">
-        <div class="Content">
-            <h1>Welcome here, it's Ewo</h1>
-            <p><a class="code-style" href="#DevelopperSection">Developper</a> and <a class="code-style" href="#DesignerSection">designer</a></p>
+    <div class="Screen" id="Home">
+        
+        <h1 class="Title">Hey,<br> My name's <strong>Ewo <span>xwx</span></strong></h1>
+
+        <img class="TitleProfilePicture" src="Ressources/ProfilePictureCropped.png" alt="">
+        
+        <div class="Tags">
+            <div class="Tag">
+                <p>Developement</p>
+            </div>
+            <div class="Tag">
+                <p>Computer science</p>
+            </div>
+            <div class="Tag">
+                <p>Design</p>
+            </div>
+            <div class="Tag">
+                <p class="TagDotsMore">...</p>
+            </div>
         </div>
-        <div class="Background">
-            <div class="Bg-Filter"></div>
-            <div class="Light" style="top: 15vh;left: 15vh;"></div>
-            <div class="Light" style="bottom: 31vh;right: 31vh;"></div>
+        
+        <div class="SocialActionButtons">
+            <button class="ActionButton PrimaryActionButton"
+            onclick="document.location.href='https://www.github.com/NowEwo'">Github <span lass="GithubUserName">@NowEwo</span></button>
+            <button class="ActionButton SecondaryActionButton">Discord <span class="DiscordUserName">ewo.fluffy</span></button>
+            <button class="ActionButton SecondaryActionButton" Icon onclick="document.location.href='https://patreon.com/NowEwo'"><span class="gg-patreon"></span></button>
+            <button class="ActionButton SecondaryActionButton" Icon onclick="document.location.href='mailto:yannnonoficiel@gmail.com'"><span class="gg-mail"></span></button>
         </div>
+        
+        <div class="light"></div>
     </div>
-    <div class="Section Content-Row" id="DevelopperSection">
-        <h1 FloatAnimation>Developper</h1>
-        <div>
-            <p>Html 5, CSS 3</p>
-            <p>Plain JS, Node JS</p>
-            <p>Python 3</p>
+    
+    <div class="Screen" id="About">
+        <h1 class="Title">About me</h1>
+        
+        <p>Hello everyone :3, how are you doing?<br>
+            My name is <strong>Ewo</strong>, and I am just an <strong>independent developer (and designer)</strong> who enjoys making websites and applications in my spare time. I started programming during my childhood with Scratch and other fun tools. Then, I tried video game development, which I didn't enjoy much, so I began creating various tools and websites <i>(often useless)</i>
+            . In my free time, I also like to tinker and engage in <strong>many different activities</strong>, such as drawing, electronics, and music production.
+        </p>
+        
+        <div class="Gallery">
+            <div class="Content">
+                <img src="Ressources/Gallery/Wallpapers.png" alt="">
+                <img src="Ressources/Gallery/Division.png" alt="">
+                <img src="Ressources/Gallery/Skycorp.png" alt="">
+            </div>
+            <img class="ArrowImageElement" src="Ressources/Arrow.png" alt="">
         </div>
+        
     </div>
-    <div class="Section Content-Row" id="DesignerSection">
-        <div>
-            <p>Figma</p>
-            <p>Adobe Animate, Illustrator</p>
+    
+    <div class="Screen" id="Contact">
+        <h1 class="Title">Contact me</h1>
+        <div class="ContactCard">
+                <h1>My contact card</h1>
+                <p>Username : Ewo</p>
+                <p>Discord : ewo.fluffy</p>
+                <p>Email : <a href="mailto:yannnonoficiel@gmail.com">yannnonoficiel@gmail.com</a></p>
         </div>
-        <h1 FloatAnimation>Designer</h1>
     </div>
 </body>
-<script>
-    function NavigateTo(Url){
-        document.location.href = Url;
-    }
-</script>
+
+<script src="script/index_script.js"></script>
 </html>

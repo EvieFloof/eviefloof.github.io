@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
+:root {
+    --background-color: rgb(248, 238, 255);
+    --text-color: rgb(53, 23, 74);
+
+    --primary: rgb(53, 23, 74);
+    --secondary: rgb(204, 189, 215);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background-color);
+
+    background-image: url("../Ressources/TiledBackground.png");
+    background-repeat: repeat;
+    background-size: 13vh;
+
+    background-attachment: fixed;
+
+    user-select: none;
+
+    overflow: hidden;
+
+    flex-direction: column;
+    display: flex;
+}
+
+.Screen {
+    padding: 3vw 9vw 0 9vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.Gallery{
+    margin-bottom: 19px;
+
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.Gallery img{
+    height: 25vh;
+    border-radius: 1vh;
+
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+
+    margin-right: 9px;
+}
+
+.Gallery .Content img:hover{
+    transform: scale(1.09);
+}
+
+.LoremIpsumLong {
+    content: "\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pretium tincidunt lacus, vehicula eleifend nisi imperdiet at. Nam et urna sed orci interdum convallis sit amet a est. Mauris sit amet urna iaculis, dapibus felis eu, volutpat magna. Donec ut ex tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus blandit lorem orci, eget condimentum nulla aliquam quis. Ut eleifend tortor sit amet nunc tincidunt dignissim. Duis vel nunc pretium ante tincidunt maximus. Phasellus ultricies magna et mauris iaculis, pharetra imperdiet odio convallis. Sed gravida erat massa, a efficitur purus vestibulum eu.\nDonec aliquet hendrerit neque sed dignissim. Vestibulum sagittis rhoncus pulvinar. Nam consequat velit sit amet tempus interdum. Nam ex tellus, molestie ac rutrum eu, dignissim vitae nibh. Fusce consequat sit amet dui nec varius. Mauris dignissim turpis at ornare laoreet. Ut faucibus nulla vel tellus tempus fermentum. Fusce nisl enim, pulvinar a sapien quis, commodo elementum libero.\nSuspendisse auctor diam vitae accumsan fringilla. Nam felis arcu, aliquam quis mi in, bibendum sollicitudin ligula. Proin ante libero, maximus eget efficitur vel, sollicitudin et augue. Etiam dignissim tellus fermentum, interdum mauris nec, rutrum urna. Nam egestas pulvinar arcu, non varius tellus efficitur non. Nam fringilla, diam vitae cursus condimentum, ante dolor condimentum diam, nec malesuada eros nulla quis eros. Cras ac tincidunt eros. Curabitur non sapien sit amet orci dignissim rhoncus. In sed mollis mauris. Fusce nec aliquet mauris, sit amet pulvinar odio. Proin a auctor erat, vitae viverra magna. Fusce blandit eros nunc, vel condimentum nibh venenatis sed. In sit amet nisi lorem. Ut sit amet lorem maximus, convallis sem in, tincidunt dolor.\nSed semper, elit et lacinia facilisis, justo erat gravida dolor, eu egestas odio nisl at velit. Sed in pretium ligula, in finibus diam. Duis et pulvinar urna. Nam egestas vel nisl in molestie. Morbi in aliquam dolor. Pellentesque ut massa eu enim pulvinar aliquet. Sed hendrerit augue at sapien semper auctor. Proin id metus sit amet metus ultrices consequat ac ac massa. Nullam at condimentum orci, sit amet efficitur est. Quisque lacinia eget dui a porttitor. Etiam eget sagittis ipsum. Ut magna tellus, accumsan ac feugiat sit amet, mollis non nunc. Sed et faucibus metus. Sed ac ante nunc. Vivamus volutpat risus ac pulvinar maximus. Pellentesque ultricies lacus tortor, sit amet rutrum massa varius vitae.\nProin dictum dapibus diam, quis posuere mauris vulputate sed. Donec eu laoreet diam. In ultrices et ipsum eget convallis. Nunc sit amet nisl a metus bibendum pharetra. Vestibulum in facilisis enim, vel elementum tellus. Phasellus sit amet dictum nulla. In vehicula rutrum porttitor. Duis mi urna, gravida sed lorem vitae, vestibulum faucibus libero.";
+}
+
+.Navigation {
+    display: flex;
+
+    justify-self: center;
+    align-self: center;
+
+    position: fixed;
+
+    bottom: 0px;
+
+    margin: 15px;
+
+    z-index: 5;
+}
+
+.Navigation a {
+    margin: 0px 13px;
+
+    text-decoration: none;
+
+    font-size: large;
+    font-weight: bold;
+}
+
+.Screen p{
+    font-size: larger;
+}
+
+.Screen p strong{
+    font-weight: bold;
+}
+
+.light {
+    background-color: #bd9ddd;
+
+    height: 359px;
+    width: 359px;
+
+    filter: blur(301px);
+
+    position: absolute;
+
+    left: -153px;
+    top: -153px;
+
+    z-index: -1;
+
+    animation: LightAnimation 3s alternate 1s infinite;
+}
+
+.Title {
+    font-size: 5vw;
+
+    margin-bottom:3vh;
+}
+
+.Title strong {
+    animation: EwoTextAnimation cubic-bezier(0.165, 0.84, 0.44, 1) 1.3s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+.Title strong span {
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+    font-size: 3vw;
+    opacity: 0;
+}
+
+.Title strong:hover span {
+    opacity: 1;
+}
+
+.TitleProfilePicture {
+    aspect-ratio: square;
+    height: 9vw;
+
+    position: absolute;
+
+    right: 9vw;
+    top: 9vw;
+
+    border-radius: 100%;
+
+    border: 3px solid var(--primary);
+
+    animation: BringBackProperties cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+}
+
+.TitleProfilePicture:hover {
+    transform: scale(1.3);
+    animation: SpringProfilePicture cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+    animation-fill-mode: forwards;
+}
+
+.Tags {
+    margin-bottom: 9vh;
+}
+
+.Tag {
+    border: 5px solid var(--primary);
+
+    display: inline-flex;
+    padding: 0px 25px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    border-radius: 19px;
+}
+
+.Tag p {
+    font-family: "Fira Code", sans-serif;
+    color: var(--primary);
+    line-height: 13px;
+}
+
+.TagDotsMore {
+    font-weight: bold;
+}
+
+.ActionButton {
+    border-radius: 13px;
+    padding: 17px 31px;
+    border: none;
+
+    font-size: x-large;
+}
+
+.PrimaryActionButton {
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
+.SecondaryActionButton {
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+.PrimaryActionButton:hover {
+    background-color: rgb(69, 40, 90);
+    cursor: pointer;
+}
+
+.SecondaryActionButton:hover {
+    background-color: #e1ceee;
+    cursor: pointer;
+}
+
+.GithubUserName , .DiscordUserName {
+    font-weight: bold;
+    user-select: all;
+}
+
+.SocialActionButtons{
+    display: flex;
+    flex-direction: row;
+}
+
+.SocialActionButtons button{
+    height: 64px;
+    margin: 0px 3px;
+}
+
+.ContactCard{
+    height: 301px;
+    width: 509px;
+
+    background: #e3cafc;
+    border-radius: 15px;
+
+    transition: box-shadow 0.1s, transform 0.1s;
+
+    align-self: center;
+
+    padding: 13px;
+}
+
+#ContactCard h1{
+    font-size: small;
+}
+
+h1,
+p,
+a,
+button {
+    font-family: "Quicksand", sans-serif;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: lighter;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+@keyframes LightAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+@keyframes SpringProfilePicture {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    100% {
+        transform: scale(1.3) rotate(13deg);
+        box-shadow: 15px 15px 15px rgba(53, 23, 74, 0.151);
+    }
+}
+
+@keyframes BringBackProperties {
+    0% {
+        transform: scale(1.3) rotate(13deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+@keyframes EwoTextAnimation {
+    0% {
+        font-weight: 100;
+        letter-spacing: 13px;
+        opacity: 0;
+    }
+
+    100% {
+        font-weight: bold;
+        letter-spacing: normal;
+        opacity: 1;
+    }
+}
