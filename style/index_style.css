@@ -129,10 +129,12 @@ body {
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
     font-size: 3vw;
     opacity: 0;
+    display: none;
 }
 
 .Title strong:hover span {
     opacity: 1;
+    display: inline-block;
 }
 
 .TitleProfilePicture {
@@ -301,4 +303,5 @@ a:hover{
         letter-spacing: normal;
         opacity: 1;
     }
+
 }
